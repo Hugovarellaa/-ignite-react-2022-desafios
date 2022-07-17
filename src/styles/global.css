@@ -23,3 +23,9 @@ body {
   color: var(--gray-300);
   -webkit-font-smoothing: antialiased;
 }
+
+body, input, button, select, textarea {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
