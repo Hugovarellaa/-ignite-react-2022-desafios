@@ -1,4 +1,4 @@
-import logoImg from "../../../public/ignite-feed-logo.svg";
+import logoImg from "../../assets/ignite-feed-logo.svg";
 import styles from "./Header.module.css";
 
 export function Header() {
