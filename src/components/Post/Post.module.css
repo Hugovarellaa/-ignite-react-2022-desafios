@@ -90,7 +90,17 @@
   margin-top: 1rem;
 }
 
-.commentForm > button[type="submit"] {
+.commentForm footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.commentForm:focus-within footer {
+  visibility: visible;
+  max-height: none;
+}
+
+.commentForm footer button[type="submit"] {
   padding: 1rem 1.5rem;
   margin-top: 1rem;
   border-radius: 8px;
