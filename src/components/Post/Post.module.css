@@ -27,3 +27,33 @@
 .content a:hover {
   color: var(--green-300);
 }
+
+.post > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post > header time {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+.post > header .author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorInfo strong {
+  display: block;
+  color: var(--gray-100);
+  list-style: 1.6;
+}
+.authorInfo span {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  list-style: 1.6;
+
+}
