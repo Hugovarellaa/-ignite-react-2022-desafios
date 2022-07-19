@@ -1,2 +1,13 @@
 .headerContainer{
+  background-color: var(--gray-800);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 0;
+}
+
+.headerContainer img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
 }
