@@ -9,6 +9,8 @@ export function Post({ author, content, publishedAt }) {
   const [comments, setComments] = useState([]);
   const [newCommentText, setNewCommentText] = useState("");
 
+  const isNewCommentEmpty = newCommentText.length === 0;
+
   const publishedAtFormatted = format(
     publishedAt,
     "dd 'de' MMMM 'às' HH:mm'h'",
@@ -86,7 +88,9 @@ export function Post({ author, content, publishedAt }) {
         />
 
         <footer>
-          <button type="submit">Publicar</button>
+          <button type="submit" disabled={isNewCommentEmpty}>
+            Publicar
+          </button>
         </footer>
       </form>
 
