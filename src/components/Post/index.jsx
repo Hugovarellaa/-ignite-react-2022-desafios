@@ -26,9 +26,20 @@ export function Post({ author, content, publishedAt }) {
     setNewCommentText("");
   }
 
+  function handleNewCommentChange() {
+    setNewCommentText(event.target.value);
+    event.target.setCustomValidity("");
+  }
+
   function handleDeleteComment(content) {
     setComments((oldState) =>
       oldState.filter((comment) => comment !== content)
+    );
+  }
+
+  function newCommentInvalid() {
+    setNewCommentText(
+      event.target.setCustomValidity("Por favor digite um comentário")
     );
   }
 
@@ -66,9 +77,12 @@ export function Post({ author, content, publishedAt }) {
 
         <textarea
           name="comment"
+          required
+          onInvalid={newCommentInvalid}
+          //(event) =>
           placeholder="Escreva um comentário..."
           value={newCommentText}
-          onChange={(event) => setNewCommentText(event.target.value)}
+          onChange={handleNewCommentChange}
         />
 
         <footer>
