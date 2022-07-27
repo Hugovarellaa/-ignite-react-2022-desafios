@@ -3,7 +3,7 @@ import styles from "./Task.module.css";
 
 export function Task() {
   return (
-    <section className={styles.task}>
+    <header className={styles.task}>
       <div className={styles.taskCompleted}>
         <strong>Tarefas criadas</strong>
         <span>0</span>
@@ -12,6 +12,6 @@ export function Task() {
         <strong>Concluídas</strong>
         <span>0</span>
       </div>
-    </section>
+    </header>
   );
 }
